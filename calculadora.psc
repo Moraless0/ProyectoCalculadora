@@ -33,6 +33,25 @@ Funcion valor_real <- pedir_real(mensaje)
 FinFuncion
 
 Algoritmo calculadora
+	Definir opc Como Entero
+	Definir valor1, valor2 Como Real
+	Repetir
+		mostrar_menu
+		opc = pedir_entero("Ingrese la opcion deseada")
+		Si opc = 1 O opc = 2 O opc = 3 Entonces
+			valor1 <- pedir_real("Ingrese el primer numero")
+			valor2 <- pedir_real("Ingrese el segundo numero")
+			resultado <- calcular(valor1, valor2, opc)
+			Escribir "Resultado ", resultado
+		SiNo
+			Si opc = 4 Entonces
+				Escribir "Bye Bye"
+			SiNo
+				Escribir "Opcion no valida"
+			FinSi
+		FinSi
+	Hasta Que opc = 4
+
 	
 	
 FinAlgoritmo
