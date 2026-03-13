@@ -27,17 +27,16 @@ Funcion valor_entero <- pedir_entero(mensaje)
 FinFuncion
 
 Funcion valor_real <- pedir_real(mensaje)
-	Definir valor_real Como Entero
+	Definir valor_real Como Real
 	Escribir mensaje
 	Leer valor_real
 FinFuncion
 
 Algoritmo calculadora
-	Definir opc Como Entero
-	Definir valor1, valor2 Como Real
+	Definir valor1, valor2, opc, resultado Como Real
 	Repetir
 		mostrar_menu
-		opc = pedir_entero("Ingrese la opcion deseada")
+		opc <- pedir_entero("Ingrese la opcion deseada")
 		Si opc = 1 O opc = 2 O opc = 3 Entonces
 			valor1 <- pedir_real("Ingrese el primer numero")
 			valor2 <- pedir_real("Ingrese el segundo numero")
